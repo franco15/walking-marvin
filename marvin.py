@@ -26,6 +26,7 @@ for i in range(100):
             action = 0
             dot_product = np.dot(observation, new_weigths)
             print(dot_product)
+            exit()
             if dot_product < -1.0:
                 action = 0
             elif dot_product >= -1.0 and dot_product < 0:
@@ -34,7 +35,6 @@ for i in range(100):
                 action = 2
             elif dot_product >= 1.0 and dot_product < 2.0:
                 action = 3
-            
             print(action)
             observation, reward, done, info = env.step(action)
 
